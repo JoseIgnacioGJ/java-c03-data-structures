@@ -26,6 +26,22 @@ public class Main {
         Employee employee2 = new Employee("Marta", "Silvestre", "987654321A", cars2);
 
         ArrayList<Employee> employees = new ArrayList<Employee>();
-        Company company = new Company("CarCompany", employees);
+        employees.add(employee1);
+        employees.add(employee2);
+        Company company1 = new Company("CarCompany", employees);
+
+        ArrayList<Company> companies = new ArrayList<Company>();
+        companies.add(company1);
+
+        for(Company company: companies)
+        {
+            for(Employee employee: company.getEmployees())
+            {
+                for(Car car: employee.getCars())
+                {
+                    System.out.println(car.toString());
+                }
+            }
+        }
     }
 }
