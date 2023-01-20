@@ -39,7 +39,7 @@ public class Main {
             {
                 for(Car car: employee.getCars())
                 {
-                    System.out.println(car.toString());
+                    System.out.println(car);
                 }
             }
         }
